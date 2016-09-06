@@ -16,7 +16,7 @@
 <% end %>
 
 <p><%= link_to "Add a sighting", new_species_sighting_path(@species_instance) %></p>
-<p><%= link_to "Edit", edit_species_path(@species_instance) %></p>
-<p><%= link_to "Delete", species_path(@species_instance), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+<p><%= link_to "Edit Species", edit_species_path(@species_instance) %></p>
+<p><%= link_to "Delete Species", species_path(@species_instance), :data => {:confirm => "You sure?", :method => "delete"} %></p>
 
 <p><%= link_to "Return to Species", species_index_path %></p>

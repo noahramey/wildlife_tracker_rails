@@ -8,4 +8,10 @@ describe 'the add a species process' do
     click_on "Create Species"
     expect(page).to have_content 'Clefairy'
   end
+
+  it "gives error when no name is entered" do
+    visit new_species_path
+    click_on 'Create Species'
+    expect(page).to have_content 'errors'
+  end
 end
