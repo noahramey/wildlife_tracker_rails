@@ -7,7 +7,7 @@
     <% @species_instance.sightings.each do |sighting| %>
     <% @region = Region.find(sighting.region_id) %>
       <li>
-        Date: <%= sighting.date %>, Region: <%= @region.name %> | <%= link_to "Edit", edit_species_sighting_path(@species_instance, sighting) %> | <%= link_to "Delete", species_sighting_path(@species_instance, sighting), :data => {:confirm => "You sure?", :method => "delete"} %>
+        Date: <%= sighting.date %>, Region: <%= link_to @region.name, region_path(@region) %> | <%= link_to "Edit", edit_species_sighting_path(@species_instance, sighting) %> | <%= link_to "Delete", species_sighting_path(@species_instance, sighting), :data => {:confirm => "You sure?", :method => "delete"} %>
       </li>
     <% end %>
   </ul>
