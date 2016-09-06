@@ -56,13 +56,12 @@ a:hover {
 
 .navbar-link {
   float: left;
-}
-
-.navbar-link a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+  a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+  }
 }
 
 .navbar a:hover {
