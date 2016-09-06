@@ -1,6 +1,6 @@
 class SpeciesController < ApplicationController
   def index
-    @species = Species.all
+    @species = Species.order('name ASC')
     render :index
   end
 
