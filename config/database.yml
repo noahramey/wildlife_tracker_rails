@@ -1,0 +1,18 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: wildlife_tracker_development
+
+test:
+  <<: *default
+  database: wildlife_tracker_test
+
+production:
+  <<: *default
+  database: wildlife_tracker_production
+  username: wildlife_tracker
+  password: <%= ENV['WILDLIFE_TRACKER_DATABASE_PASSWORD'] %>

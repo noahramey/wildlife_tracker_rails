@@ -1,0 +1,11 @@
+<h1>Species</h1>
+
+<ul>
+  <% @species.each do |species_instance| %>
+    <li><%= link_to species_instance.name, species_path(species_instance) %></li>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to "New Species", new_species_path %>
