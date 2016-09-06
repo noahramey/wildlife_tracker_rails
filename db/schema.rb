@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160906162428) do
+ActiveRecord::Schema.define(version: 20160906172812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "regions", force: :cascade do |t|
+    t.string "name"
+  end
 
   create_table "sightings", force: :cascade do |t|
     t.date     "date"
@@ -22,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160906162428) do
     t.integer  "species_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "region_id"
   end
 
   create_table "species", force: :cascade do |t|

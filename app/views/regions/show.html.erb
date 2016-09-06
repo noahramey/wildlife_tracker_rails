@@ -1,0 +1,14 @@
+<h1><%= @region.name %></h1>
+
+<% if @region.sightings.any? %>
+  <h4>Sightings in this region:</h4>
+
+  <ul>
+    <% @region.sightings.each do |sighting| %>
+      <% @species = Species.find(sighting.species_id) %>
+      <li>A <%= link_to @species.name, species_path(@species) %> was seen on <%= sighting.date %>.</li>
+    <% end %>
+  </ul>
+<% else %>
+  <h4>There are no pokemans here.</h4>
+<% end %>

@@ -7,5 +7,6 @@
   <%= f.text_field :latitude %>
   <%= f.label :longitude %>
   <%= f.text_field :longitude %>
+  <%= f.collection_select(:region_id, Region.all, :id, :name) %>
   <p><%= f.submit %></p>
 <% end %>
